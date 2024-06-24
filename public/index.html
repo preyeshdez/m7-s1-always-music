@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script defer src="./assets/js/script.js"></script>
+</head>
+
+<body>
+    <header class="py-5">
+        <h1 class="text-center">Always Music</h1>
+    </header>
+
+    <main class="container pb-5">
+        <!-- registro de estudiantes-->
+        <section class="sectAddEstudiante">
+            <form id="formAddEstudiante" class="w-50 mx-auto">
+                <div>
+                    <label for="nombreAddEstudiante" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" id="nombreAddEstudiante" required>
+
+                </div>
+                <div>
+                    <label for="rutAddEstudiante" class="form-label">RUT:</label>
+                    <input type="text" class="form-control" name="rut" id="rutAddEstudiante" required>
+                </div>
+                <div>
+                    <label for="cursoAddEstudiante" class="form-label">Curso:</label>
+                    <input type="text" class="form-control" name="curso" id="cursoAddEstudiante" required>
+                </div>
+                <div>
+                    <label for="nivelAddEstudiante" class="form-label">Nivel:</label>
+                    <input type="number" min="1" max="10" class="form-control" name="nivel" id="nivelAddEstudiante" required>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input type="submit" class="btn btn-success my-2" value="Agregar">
+                </div>
+            </form>
+
+        </section>
+
+        <!-- lista de estudiantes -->
+        <section class="sectListaEstudiantes">
+            <h2 class="text-center">Lista de estudiantes</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">N°</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">RUT</th>
+                        <th scope="col">Curso</th>
+                        <th scope="col">Nivel</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaEstudiantes">
+
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+
+    <!-- modal para update -->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="updateModalLabel">Formulario de actualización</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- formulario update -->
+
+                    <form id="formUpdateEstudiante" class="w-50 mx-auto">
+                        <div>
+                            <label for="rutUpdateEstudiante" class="form-label">RUT:</label>
+                            <input type="text" class="form-control" name="id" id="rutUpdateEstudiante" required disabled>
+                        </div>
+                        <div>
+                            <label for="nombreUpdateEstudiante" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" name="name" id="nombreUpdateEstudiante" required>
+                        </div>
+                        <div>
+                            <label for="cursoUpdateEstudiante" class="form-label">Curso:</label>
+                            <input type="text" class="form-control" name="curso" id="cursoUpdateEstudiante" required>
+                        </div>
+                        <div>
+                            <label for="nivelUpdateEstudiante" class="form-label">Nivel:</label>
+                            <input type="text" class="form-control" name="nivel" id="nivelUpdateEstudiante" required>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <input type="submit" class="btn btn-warning my-2" value="Actualizar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
